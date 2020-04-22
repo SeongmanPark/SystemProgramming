@@ -10,7 +10,7 @@ int main()
  pid_t pid;
  int status, fds[2];
  char buffer[BUFSIZ];
- if( (status = pipe(fds)) == -1 )
+ if(pipe(fds) == -1 )
      perror("pipe() error\n");
 
  if((pid=fork())>0)
